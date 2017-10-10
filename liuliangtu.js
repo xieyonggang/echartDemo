@@ -235,7 +235,7 @@ var series = [];
 chart2option = {
     backgroundColor: '#293441',
     title : {
-        text: '数据迁移',
+        text: '骨干网当前流量',
         subtext: '',
         left: 'center',
         textStyle : {

@@ -15,7 +15,7 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857;
-    color: #333;
+    color: #fff;
 	height: 100%;
 }
 .container{
@@ -6841,4 +6841,15 @@ a {
     .modal-dialog {
         width: 900px
     }
+}
+
+div{
+  border :solid;
+  border-color : #fff;
+  border-width : 1px
+  }
+  
+.table-borderless td,
+.table-borderless th {
+    border: 0;
 }
