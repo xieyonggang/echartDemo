@@ -282,4 +282,46 @@ chart2option = {
 if (chart2option && typeof chart2option === "object") {
     chart2.setOption(chart2option, true);
 }
-       
+
+
+var guganliuliang01chart = echarts.init(document.getElementById('guganliuliang01'),'chalk');
+var guganliuliang01option = {
+    series: [{
+            type: 'gauge',
+            min: 0,
+            max: 100,
+            splitNumber: 5,
+            radius: '50%',
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    width: 3
+                }
+            },
+            axisTick: {            // 坐标轴小标记
+                length: 5,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto'
+                }
+            },
+            splitLine: {           // 分隔线
+                length: 3,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    color: 'auto'
+                }
+            },
+            title : {
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontSize: 8,
+                    fontStyle: 'italic'
+                }
+            },
+            detail : {
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder'
+                }
+            },
+            data:[{value: 40, name: 'km/h'}]
+        }]
+};
+guganliuliang01chart.setOption(guganliuliang01option);  
