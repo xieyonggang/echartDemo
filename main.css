@@ -6847,9 +6847,8 @@ div{
   border :solid;
   border-color : #fff;
   border-width : 1px
-  }
-  
-.table-borderless td,
-.table-borderless th {
-    border: 0;
+}
+
+#xianluliyonglv {
+	text-align : center;
 }
