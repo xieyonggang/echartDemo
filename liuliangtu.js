@@ -154,7 +154,7 @@ var convertData = function (data) {
     return res;
 };
 
-var color = ['#e5323e','#003366', '#006699', '#4cabce'];
+var color = ['#003366', '#006699', '#4cabce', '#e5323e'];
 var series = [];
 [['南海', NHData]].forEach(function (item, i) {
     series.push({
