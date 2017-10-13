@@ -11,6 +11,8 @@ for (var i = 1; i < 20000; i++) {
 }
 
 fanghuoqianggaojingoption = {
+    backgroundColor: 'chalk',
+    color : ['#4cabce'],
 	title : {
         text: '告警增长趋势',
         color: '#fff',
@@ -18,39 +20,52 @@ fanghuoqianggaojingoption = {
         top: 'top',
 		fontSize: 14
     },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: date1
+    dataZoom: {
+        show: false,
+        start: 0,
+        end: 100
     },
-    yAxis: {
-        type: 'value',
-        boundaryGap: [0, '100%']
-    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: true,
+            data: (function (){
+                var now = new Date();
+                var res = [];
+                var len = 10;
+                while (len--) {
+                    res.unshift(now.toLocaleTimeString().replace(/^\D*/,''));
+                    now = new Date(now - 2000);
+                }
+                return res;
+            })()
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            scale: true,
+            name: '告警次数',
+			color: '#fff',
+            max: 500,
+            min: 0,
+            boundaryGap: [0.2, 0.2]
+        }
+    ],
     series: [
         {
-            name:'模拟数据',
-            type:'line',
-            smooth:true,
-            symbol: 'none',
-            sampling: 'average',
-            itemStyle: {
-                normal: {
-                    color: 'rgb(255, 70, 131)'
+            name:'告警次数',
+            type:'bar',
+            xAxisIndex: 0,
+            yAxisIndex: 0,
+            data:(function (){
+                var res = [];
+                var len = 10;
+                while (len--) {
+                    res.push(Math.round(Math.random() * 100) +400);
                 }
-            },
-            areaStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: 'rgb(255, 158, 68)'
-                    }, {
-                        offset: 1,
-                        color: 'rgb(255, 70, 131)'
-                    }])
-                }
-            },
-            data: data1
+                return res;
+            })()
         }
     ]
 };
@@ -58,6 +73,18 @@ fanghuoqianggaojingoption = {
 var fanghuoqianggaojingchart = echarts.init(document.getElementById('fanghuoqianggaojing'),'chalk');
 fanghuoqianggaojingchart.setOption(fanghuoqianggaojingoption);
 
+setInterval(function (){
+    axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
+
+    var data0 = fanghuoqianggaojingoption.series[0].data;
+    data0.shift();
+    data0.push(Math.round(Math.random() * 100) + 400);
+
+    fanghuoqianggaojingoption.xAxis[0].data.shift();
+    fanghuoqianggaojingoption.xAxis[0].data.push(axisData);
+
+    fanghuoqianggaojingchart.setOption(fanghuoqianggaojingoption);
+}, 2100);
 
 fanghuoqiangFW01option = {
     xAxis: {

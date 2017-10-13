@@ -154,7 +154,7 @@ var convertData = function (data) {
     return res;
 };
 
-var color = ['orange', 'red', 'purple'];
+var color = ['#e5323e','#003366', '#006699', '#4cabce'];
 var series = [];
 [['南海', NHData]].forEach(function (item, i) {
     series.push({
@@ -290,44 +290,167 @@ if (dangqianliuliangOption && typeof dangqianliuliangOption === "object") {
     dangqianliuliangchart2.setOption(dangqianliuliangOption, true);
 }
 
-var guganliuliang01chart = echarts.init(document.getElementById('guganliuliang01'),'chalk');
-var guganliuliang01option = {
-    series: [{
-            type: 'gauge',
-            min: 0,
-            max: 100,
-            splitNumber: 5,
-            radius: '50%',
+var shebeiliantongchart = echarts.init(document.getElementById('shebeiliantong'),'chalk');
+var shebeiliantongoption = {
+    series : [
+        {
+            type:'gauge',
+            min:0,
+            max:100,
+            splitNumber:10,
+            radius: '90%',
             axisLine: {            // 坐标轴线
                 lineStyle: {       // 属性lineStyle控制线条样式
-                    width: 3
+                    color: [[1, 'lime']],
+                    width: 5,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
                 }
             },
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5,
+					fontSize: 2
+                },
+				show : false
+            },
             axisTick: {            // 坐标轴小标记
-                length: 5,        // 属性length控制线长
+                length :10,        // 属性length控制线长
                 lineStyle: {       // 属性lineStyle控制线条样式
-                    color: 'auto'
+                    color: 'auto',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10,
+					fontSize: 5
                 }
             },
             splitLine: {           // 分隔线
-                length: 3,         // 属性length控制线长
+                length :10,         // 属性length控制线长
                 lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
-                    color: 'auto'
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
                 }
+            },
+            pointer: {
+                // 分隔线
+                width: 5,
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5
             },
             title : {
                 textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                     fontWeight: 'bolder',
-                    fontSize: 8,
-                    fontStyle: 'italic'
+                    fontSize: 15,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
                 }
             },
             detail : {
+                borderWidth: 1,
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                offsetCenter: [0, '50%'],       // x, y，单位px
                 textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                    fontWeight: 'bolder'
+                    fontWeight: 'bolder',
+                    color: '#fff',
+					fontSize: 10
+                },
+				formatter : '{value}%'
+            },
+            data:[{value: 80, name: '设备联通性'}]
+        }
+    ]
+};
+shebeiliantongchart.setOption(shebeiliantongoption);  
+
+
+
+var xianluliantongchart = echarts.init(document.getElementById('xianluliantong'),'chalk');
+var xianluliantongoption = {
+    series : [
+        {
+            type:'gauge',
+            min:0,
+            max:100,
+            splitNumber:10,
+            radius: '90%',
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: [[1, '#1e90ff']],
+                    width: 5,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
                 }
             },
-            data:[{value: 40, name: 'km/h'}]
-        }]
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5,
+					fontSize: 2
+                },
+				show : false
+            },
+            axisTick: {            // 坐标轴小标记
+                length :10,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10,
+					fontSize: 5
+                }
+            },
+            splitLine: {           // 分隔线
+                length :10,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            pointer: {
+                // 分隔线
+                width: 5,
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5
+            },
+            title : {
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontSize: 15,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            detail : {
+                borderWidth: 1,
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                offsetCenter: [0, '50%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    color: '#fff',
+					fontSize: 10
+                },
+				formatter : '{value}%'
+            },
+            data:[{value: 60, name: '线路联通性'}]
+        }
+    ]
 };
-guganliuliang01chart.setOption(guganliuliang01option);  
+xianluliantongchart.setOption(xianluliantongoption); 
+
+setInterval(function (){
+    xianluliantongoption.series[0].data[0].value = (90 +(Math.random()*10)).toFixed(0);
+    shebeiliantongoption.series[0].data[0].value = (80 +(Math.random()*20)).toFixed(0);
+    xianluliantongchart.setOption(xianluliantongoption); 
+	shebeiliantongchart.setOption(shebeiliantongoption);  
+},2000)

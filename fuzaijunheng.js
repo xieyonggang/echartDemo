@@ -33,7 +33,7 @@ var fuzaijunhengGTM1option = {
             label: {
                 normal: {
                     formatter: 'GTM1 - {d}%',
-                    position: 'right',
+                    position: 'left',
                     show: true,
                     textStyle: {
                         fontSize: '15',
