@@ -6843,8 +6843,9 @@ a {
     }
 }
 
+
 div{
-  border :solid;
+  border : none;
   border-color : #fff;
   border-width : 1px
 }

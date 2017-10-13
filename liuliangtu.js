@@ -1,7 +1,7 @@
 // based on prepared DOM, initialize echarts instance
-var chart2 = echarts.init(document.getElementById('chart2'),'chalk');
 
-chart2option = null;
+
+dangqianliuliangOption = null;
 var geoCoordMap = {
     '上海': [121.4648,31.2891],
     '东莞': [113.8953,22.901],
@@ -154,7 +154,7 @@ var convertData = function (data) {
     return res;
 };
 
-var color = ['#a6c84c', '#ffa022', '#46bee9'];
+var color = ['orange', 'red', 'purple'];
 var series = [];
 [['南海', NHData]].forEach(function (item, i) {
     series.push({
@@ -232,7 +232,7 @@ var series = [];
     });
 });
 
-chart2option = {
+dangqianliuliangOption = {
     backgroundColor: '#293441',
     title : {
         text: '骨干网当前流量',
@@ -251,7 +251,7 @@ chart2option = {
         max : 100,
         calculable : true,
 		inRange: {
-            color: ['#ff3333', 'orange', 'yellow','lime','aqua'],
+            color: ['orange', 'yellow','lime','aqua'],
             symbolSize: [2, 10]
         },
         textStyle:{
@@ -261,6 +261,7 @@ chart2option = {
     },
     geo: {
         map: 'china',
+		layoutSize: 100,
         label: {
             emphasis: {
                 show: false
@@ -269,7 +270,7 @@ chart2option = {
         roam: true,
         itemStyle: {
             normal: {
-                areaColor: '#323c48',
+                areaColor: '#a6f08f',
                 borderColor: '#404a59'
             },
             emphasis: {
@@ -278,11 +279,16 @@ chart2option = {
         }
     },
     series: series
-};;
-if (chart2option && typeof chart2option === "object") {
-    chart2.setOption(chart2option, true);
+};
+var dangqianliuliangchart = echarts.init(document.getElementById('dangqianliuliang'),'chalk');
+if (dangqianliuliangOption && typeof dangqianliuliangOption === "object") {
+    dangqianliuliangchart.setOption(dangqianliuliangOption, true);
 }
 
+var dangqianliuliangchart2 = echarts.init(document.getElementById('dangqianliuliang2'),'chalk');
+if (dangqianliuliangOption && typeof dangqianliuliangOption === "object") {
+    dangqianliuliangchart2.setOption(dangqianliuliangOption, true);
+}
 
 var guganliuliang01chart = echarts.init(document.getElementById('guganliuliang01'),'chalk');
 var guganliuliang01option = {
