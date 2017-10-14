@@ -11,7 +11,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-	background-color: #293441;
+	background-color: rgba(104,14,115,1);
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857;
@@ -1464,8 +1464,6 @@ pre code {
 .col-lg-12 {
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px
 }
 .col-xs-1,
 .col-xs-2,
@@ -6854,6 +6852,14 @@ div{
 	font-size: 25px;
 	font-weight : bold;
 	text-align : center;
+	vertical-align : middle
+}
+
+.text{
+    font-family: sans-serif;
+	font-size: 15px;
+	font-weight : bolder;
+	text-align : right;
 	vertical-align : middle
 }
 #xianluliyonglv {

@@ -13,33 +13,27 @@ var dataStyle = {
 
 var fuzaijunhengGTM1chart = echarts.init(document.getElementById('fuzaijunhengGTM1'),'chalk');
 var fuzaijunhengGTM1option = {
-    series: [{
-        type: 'pie',
-		title : {
-			text: '骨干网当前流量',
-			subtext: '',
-			position : 'top',
-			textStyle : {
-				color: '#000'
-			}
-		},
-        clockWise: false,
-        radius: ['50%', '70%'],
-        itemStyle: dataStyle,
-        hoverAnimation: false,
-        //center: ['75%', '50%'],
-        data: [{
-            value: 75,
+    series: [
+        {
+            type:'pie',
+            radius: ['60%', '80%'],
+            avoidLabelOverlap: true,
             label: {
                 normal: {
-                    formatter: 'GTM1 - {d}%',
-                    position: 'left',
+                    show: true,
+                    position: 'center'
+                },
+                emphasis: {
                     show: true,
                     textStyle: {
-                        fontSize: '15',
-                        fontWeight: 'normal',
-                        color: '#a6f08f'
+                        fontSize: '12',
+                        fontWeight: 'bold'
                     }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
                 }
             },
             itemStyle: {
@@ -48,33 +42,38 @@ var fuzaijunhengGTM1option = {
                     shadowColor: '#a6f08f',
                     shadowBlur: 10
                 }
-            }
-        }]
-	}]
+            },
+            data:[
+                {value:335, name:'GTM1'}
+            ]
+        }
+    ]
 };
 fuzaijunhengGTM1chart.setOption(fuzaijunhengGTM1option);
 
 var fuzaijunhengGTM2chart = echarts.init(document.getElementById('fuzaijunhengGTM2'),'chalk');
 var fuzaijunhengGTM2option = {
-    series: [{
-        type: 'pie',
-        clockWise: false,
-        radius: ['50%', '70%'],
-        itemStyle: dataStyle,
-        hoverAnimation: false,
-        //center: ['75%', '50%'],
-        data: [{
-            value: 75,
+    series: [
+        {
+            type:'pie',
+            radius: ['60%', '80%'],
+            avoidLabelOverlap: true,
             label: {
                 normal: {
-                    formatter: 'GTM2 - {d}%',
-                    position: 'left',
+                    show: true,
+                    position: 'center'
+                },
+                emphasis: {
                     show: true,
                     textStyle: {
-                        fontSize: '15',
-                        fontWeight: 'normal',
-                        color: '#a6f08f'
+                        fontSize: '12',
+                        fontWeight: 'bold'
                     }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
                 }
             },
             itemStyle: {
@@ -83,33 +82,38 @@ var fuzaijunhengGTM2option = {
                     shadowColor: '#a6f08f',
                     shadowBlur: 10
                 }
-            }
-        }]
-	}]
+            },
+            data:[
+                {value:335, name:'GTM2'}
+            ]
+        }
+    ]
 };
 fuzaijunhengGTM2chart.setOption(fuzaijunhengGTM2option);
 
 var fuzaijunhengLTM1chart = echarts.init(document.getElementById('fuzaijunhengLTM1'),'chalk');
 var fuzaijunhengLTM1option = {
-    series: [{
-        type: 'pie',
-        clockWise: false,
-        radius: ['50%', '70%'],
-        itemStyle: dataStyle,
-        hoverAnimation: false,
-        center: ['50%', '50%'],
-        data: [{
-            value: 75,
+    series: [
+        {
+            type:'pie',
+            radius: ['60%', '80%'],
+            avoidLabelOverlap: true,
             label: {
                 normal: {
-                    formatter: 'LTM1 - {d}%',
-                    position: 'left',
+                    show: true,
+                    position: 'center'
+                },
+                emphasis: {
                     show: true,
                     textStyle: {
-                        fontSize: '10',
-                        fontWeight: 'normal',
-                        color: '#a6f08f'
+                        fontSize: '12',
+                        fontWeight: 'bold'
                     }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
                 }
             },
             itemStyle: {
@@ -118,33 +122,38 @@ var fuzaijunhengLTM1option = {
                     shadowColor: '#a6f08f',
                     shadowBlur: 10
                 }
-            }
-        }]
-	}]
+            },
+            data:[
+                {value:335, name:'LTM1'}
+            ]
+        }
+    ]
 };
 fuzaijunhengLTM1chart.setOption(fuzaijunhengLTM1option);
 
 var fuzaijunhengLTM2chart = echarts.init(document.getElementById('fuzaijunhengLTM2'),'chalk');
 var fuzaijunhengLTM2option = {
-    series: [{
-        type: 'pie',
-        clockWise: false,
-        radius: ['50%', '70%'],
-        itemStyle: dataStyle,
-        hoverAnimation: false,
-        //center: ['75%', '50%'],
-        data: [{
-            value: 75,
+    series: [
+        {
+            type:'pie',
+            radius: ['60%', '80%'],
+            avoidLabelOverlap: true,
             label: {
                 normal: {
-                    formatter: 'LTM2 - {d}%',
-                    position: 'left',
+                    show: true,
+                    position: 'center'
+                },
+                emphasis: {
                     show: true,
                     textStyle: {
-                        fontSize: '10',
-                        fontWeight: 'normal',
-                        color: '#a6f08f'
+                        fontSize: '12',
+                        fontWeight: 'bold'
                     }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
                 }
             },
             itemStyle: {
@@ -153,9 +162,12 @@ var fuzaijunhengLTM2option = {
                     shadowColor: '#a6f08f',
                     shadowBlur: 10
                 }
-            }
-        }]
-	}]
+            },
+            data:[
+                {value:335, name:'LTM2'}
+            ]
+        }
+    ]
 };
 fuzaijunhengLTM2chart.setOption(fuzaijunhengLTM2option);
 

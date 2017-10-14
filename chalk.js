@@ -1,4 +1,3 @@
-
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
@@ -31,7 +30,7 @@
             "#d2f5a6",
             "#76f2f2"
         ],
-        "backgroundColor": "rgba(41,52,65,1)",
+        "backgroundColor": "rgba(104,14,115,1)",
         "textStyle": {},
         "title": {
             "textStyle": {

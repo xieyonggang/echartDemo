@@ -11,7 +11,6 @@ for (var i = 1; i < 20000; i++) {
 }
 
 fanghuoqianggaojingoption = {
-    backgroundColor: 'chalk',
     color : ['#4cabce'],
 	title : {
         text: '告警增长趋势',
@@ -29,6 +28,11 @@ fanghuoqianggaojingoption = {
         {
             type: 'category',
             boundaryGap: true,
+			axisLine: {
+				lineStyle: {
+					color: '#eee'
+				}
+			},
             data: (function (){
                 var now = new Date();
                 var res = [];
@@ -47,6 +51,17 @@ fanghuoqianggaojingoption = {
             scale: true,
             name: '告警次数',
 			color: '#fff',
+			nameLocation: 'end',
+			nameGap: 20,
+			nameTextStyle: {
+				color: '#fff',
+				fontSize: 16
+			},
+			axisLine: {
+				lineStyle: {
+					color: '#eee'
+				}
+			},
             max: 500,
             min: 0,
             boundaryGap: [0.2, 0.2]
@@ -91,6 +106,9 @@ fanghuoqiangFW01option = {
         type : 'category',
           show : false
     },
+	grid: [
+        {x: '80%', y: '90%'}
+    ],
     yAxis: {
         type : 'value',
         show : false
@@ -102,7 +120,7 @@ fanghuoqiangFW01option = {
 			barWidth : 15,
             itemStyle: {
                 normal: {
-                    color: '#0f0'
+                    color: '#a6f08f'
                 },
             },
 			label: {
@@ -111,7 +129,10 @@ fanghuoqiangFW01option = {
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 20
+					distance : 25,
+					fontSize : 15,
+					fontWeight: 'bolder',
+					color : '#fff'
                 }
             },
             data:[90]
@@ -134,6 +155,9 @@ var fanghuoqiangFW01chart = echarts.init(document.getElementById('fanghuoqiangFW
 fanghuoqiangFW01chart.setOption(fanghuoqiangFW01option);
 
 fanghuoqiangFW02option = {
+    grid: [
+        {x: '80%', y: '90%'}
+    ],
     xAxis: {
         type : 'category',
           show : false
@@ -149,7 +173,7 @@ fanghuoqiangFW02option = {
 			barWidth : 15,
             itemStyle: {
                 normal: {
-                    color: '#0f0'
+                    color: '#a6f08f'
                 },
             },
 			label: {
@@ -158,7 +182,10 @@ fanghuoqiangFW02option = {
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 20
+					distance : 25,
+					fontSize : 15,
+					fontWeight: 'bolder',
+					color : '#fff'
                 }
             },
             data:[90]
@@ -181,7 +208,10 @@ var fanghuoqiangFW02chart = echarts.init(document.getElementById('fanghuoqiangFW
 fanghuoqiangFW02chart.setOption(fanghuoqiangFW02option);
 
 fanghuoqiangEB01option = {
-    xAxis: {
+    grid: [
+        {x: '80%', y: '90%'}
+    ],
+	xAxis: {
         type : 'category',
           show : false
     },
@@ -196,7 +226,7 @@ fanghuoqiangEB01option = {
 			barWidth : 15,
             itemStyle: {
                 normal: {
-                    color: '#0f0'
+                    color: '#a6f08f'
                 },
             },
 			label: {
@@ -205,14 +235,17 @@ fanghuoqiangEB01option = {
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 20
+					distance : 25,
+					fontSize : 15,
+					fontWeight: 'bolder',
+					color : '#fff'
                 }
             },
             data:[90]
         },{
             type: 'bar',
             stack:  'full',
-			barWidth : 15,
+			barWidth : 20,
             itemStyle: {
                 normal: {
                     color: '#fff'
@@ -228,7 +261,10 @@ var fanghuoqiangEB01chart = echarts.init(document.getElementById('fanghuoqiangEB
 fanghuoqiangEB01chart.setOption(fanghuoqiangEB01option);
 
 fanghuoqiangEB02option = {
-    xAxis: {
+    grid: [
+        {x: '80%', y: '90%'}
+    ],
+	xAxis: {
         type : 'category',
           show : false
     },
@@ -243,7 +279,7 @@ fanghuoqiangEB02option = {
 			barWidth : 15,
             itemStyle: {
                 normal: {
-                    color: '#0f0'
+                    color: '#a6f08f'
                 },
             },
 			label: {
@@ -252,7 +288,10 @@ fanghuoqiangEB02option = {
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 20
+					distance : 25,
+					fontSize : 15,
+					fontWeight: 'bolder',
+					color : '#fff'
                 }
             },
             data:[90]

@@ -117,25 +117,54 @@ var geoCoordMap = {
     '长治': [112.8625,36.4746],
     '阳泉': [113.4778,38.0951],
     '青岛': [120.4651,36.3373],
-    '韶关': [113.7964,24.7028],
-	'台北': [121.538333,25.095905]
+	'台北': [121.538333,25.095905],
+	'澳门': [113.546589,22.192651],
+	'韶关': [113.606976,24.809321],
+	'清远': [113.065917,23.686906],
+	'梅州': [116.128387,24.296022],
+	'河源': [114.701697,23.749949],
+	'汕头': [116.689104,23.359888],
+	'惠州': [114.391363,23.091096],
+	'东莞': [113.866504,23.093545],
+	'佛山': [113.10724,23.016317],
+	'肇庆': [112.46344,23.093585],
+	'中山': [113.395973,22.512967],
+	'珠海': [113.575081,22.279508],
+	'江门': [113.575081,22.279508],
+	'阳江': [111.986764,21.862998],
+	'茂名': [110.932693,21.668795],
+	'湛江': [110.357505,21.275376]
+	
 };
 
-var NHData = [
-    [{name:'南海'},{name:'福州',value:95}],
-    [{name:'南海'},{name:'太原',value:90}],
-    [{name:'南海'},{name:'长春',value:80}],
-    [{name:'南海'},{name:'重庆',value:70}],
-    [{name:'南海'},{name:'西安',value:60}],
-    [{name:'南海'},{name:'成都',value:50}],
-    [{name:'南海'},{name:'常州',value:40}],
-    [{name:'南海'},{name:'北京',value:30}],
-	[{name:'南海'},{name:'兰州',value:35}],
-	[{name:'南海'},{name:'台北',value:85}],
-    [{name:'南海'},{name:'拉萨',value:20}],
-    [{name:'南海'},{name:'海口',value:10}],
+var CHINAData = [
+    [{name:'南海'},{name:'哈尔滨',value:95}],
+    [{name:'南海'},{name:'沈阳',value:90}],
+    [{name:'南海'},{name:'大连',value:80}],
+    [{name:'南海'},{name:'北京',value:70}],
+    [{name:'南海'},{name:'天津',value:60}],
+    [{name:'南海'},{name:'石家庄',value:50}],
+    [{name:'南海'},{name:'济南',value:40}],
+    [{name:'南海'},{name:'郑州',value:30}],
+	[{name:'南海'},{name:'西安',value:35}],
+	[{name:'南海'},{name:'南京',value:85}],
+    [{name:'南海'},{name:'苏州',value:20}],
+    [{name:'南海'},{name:'合肥',value:10}],
+	[{name:'南海'},{name:'上海',value:10}],
+	[{name:'南海'},{name:'武汉',value:10}],
+	[{name:'南海'},{name:'杭州',value:10}],
+	[{name:'南海'},{name:'宁波',value:10}],
+	[{name:'南海'},{name:'成都',value:10}],
+	[{name:'南海'},{name:'重庆',value:10}],
+	[{name:'南海'},{name:'长沙',value:10}],
+	[{name:'南海'},{name:'南昌',value:10}],
+	[{name:'南海'},{name:'福州',value:10}],
+	[{name:'南海'},{name:'澳门',value:10}],
+	[{name:'南海'},{name:'南宁',value:10}],
+	[{name:'南海'},{name:'昆明',value:10}],
 	[{name:'南海'},{name:'乌鲁木齐',value:45}]
 ];
+
 
 var convertData = function (data) {
     var res = [];
@@ -155,9 +184,9 @@ var convertData = function (data) {
 };
 
 var color = ['#003366', '#006699', '#4cabce', '#e5323e'];
-var series = [];
-[['南海', NHData]].forEach(function (item, i) {
-    series.push({
+var chinaSeries = [];
+[['南海', CHINAData]].forEach(function (item, i) {
+    chinaSeries.push({
         name: item[0],
         type: 'lines',
         zlevel: 1,
@@ -233,9 +262,8 @@ var series = [];
 });
 
 dangqianliuliangOption = {
-    backgroundColor: '#293441',
     title : {
-        text: '骨干网当前流量',
+        text: '骨干网当前流量（全国）',
         subtext: '',
         left: 'center',
         textStyle : {
@@ -270,7 +298,7 @@ dangqianliuliangOption = {
         roam: true,
         itemStyle: {
             normal: {
-                areaColor: '#a6f08f',
+                areaColor: '#0098d9',
                 borderColor: '#404a59'
             },
             emphasis: {
@@ -278,20 +306,165 @@ dangqianliuliangOption = {
             }
         }
     },
-    series: series
+    series: chinaSeries
 };
 var dangqianliuliangchart = echarts.init(document.getElementById('dangqianliuliang'),'chalk');
 if (dangqianliuliangOption && typeof dangqianliuliangOption === "object") {
     dangqianliuliangchart.setOption(dangqianliuliangOption, true);
 }
 
+
+
+var GDData = [
+    [{name:'南海'},{name:'韶关',value:95}],
+    [{name:'南海'},{name:'清远',value:90}],
+    [{name:'南海'},{name:'梅州',value:80}],
+    [{name:'南海'},{name:'河源',value:70}],
+    [{name:'南海'},{name:'汕头',value:60}],
+    [{name:'南海'},{name:'惠州',value:50}],
+    [{name:'南海'},{name:'东莞',value:40}],
+    [{name:'南海'},{name:'佛山',value:30}],
+	[{name:'南海'},{name:'肇庆',value:35}],
+	[{name:'南海'},{name:'中山',value:85}],
+    [{name:'南海'},{name:'珠海',value:20}],
+    [{name:'南海'},{name:'江门',value:10}],
+	[{name:'南海'},{name:'阳江',value:10}],
+	[{name:'南海'},{name:'茂名',value:10}],
+	[{name:'南海'},{name:'广州',value:10}]
+];
+
+var gzSeries = [];
+[['南海', GDData]].forEach(function (item, i) {
+    gzSeries.push({
+        name: item[0],
+        type: 'lines',
+        zlevel: 1,
+        effect: {
+            show: true,
+            period: 6,
+            trailLength: 0.7,
+            color: '#fff',
+            symbolSize: 3
+        },
+        lineStyle: {
+            normal: {
+                color: color[i],
+                width: 0,
+                curveness: 0.2
+            }
+        },
+        data: convertData(item[1])
+    },
+    {
+        name: item[0],
+        type: 'lines',
+        zlevel: 2,
+        symbol: ['none', 'arrow'],
+        symbolSize: 10,
+        effect: {
+            show: true,
+            period: 6,
+            trailLength: 0,
+            symbol: 'none',
+            symbolSize: 15
+        },
+        lineStyle: {
+            normal: {
+                color: color[i],
+                width: 1,
+                opacity: 0.6,
+                curveness: 0.2
+            }
+        },
+        data: convertData(item[1])
+    },
+    {
+        name: item[0],
+        type: 'effectScatter',
+        coordinateSystem: 'geo',
+        zlevel: 2,
+        rippleEffect: {
+            brushType: 'stroke'
+        },
+        label: {
+            normal: {
+                show: true,
+                position: 'right',
+                formatter: '{b}'
+            }
+        },
+        symbolSize: function (val) {
+            return val[2] / 8;
+        },
+        itemStyle: {
+            normal: {
+                color: color[i]
+            }
+        },
+        data: item[1].map(function (dataItem) {
+            return {
+                name: dataItem[1].name,
+                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+            };
+        })
+    });
+});
+
+dangqianliuliang2Option = {
+    title : {
+        text: '骨干网当前流量（广东）',
+        subtext: '',
+        left: 'center',
+        textStyle : {
+            color: '#fff'
+        }
+    },
+    tooltip : {
+        trigger: 'item'
+    },
+	visualMap: {
+	    type: 'continuous',
+        min : 0,
+        max : 100,
+        calculable : true,
+		inRange: {
+            color: ['#c12e34'],
+            symbolSize: [2, 10]
+        },
+        textStyle:{
+            color:'#fff'
+        },
+		show : false
+    },
+    geo: {
+        map: '广东',
+		layoutSize: 100,
+        label: {
+            emphasis: {
+                show: false
+            }
+        },
+        roam: true,
+        itemStyle: {
+            normal: {
+                areaColor: '#87f7cf',
+                borderColor: '#404a59'
+            },
+            emphasis: {
+                areaColor: '#2a333d'
+            }
+        }
+    },
+    series: gzSeries
+};
+
 var dangqianliuliangchart2 = echarts.init(document.getElementById('dangqianliuliang2'),'chalk');
-if (dangqianliuliangOption && typeof dangqianliuliangOption === "object") {
-    dangqianliuliangchart2.setOption(dangqianliuliangOption, true);
+if (dangqianliuliang2Option && typeof dangqianliuliang2Option === "object") {
+    dangqianliuliangchart2.setOption(dangqianliuliang2Option, true);
 }
 
-var shebeiliantongchart = echarts.init(document.getElementById('shebeiliantong'),'chalk');
-var shebeiliantongoption = {
+var guangzhoushujuchart = echarts.init(document.getElementById('guangzhoushuju'),'chalk');
+var guangzhoushujuoption = {
     series : [
         {
             type:'gauge',
@@ -362,16 +535,16 @@ var shebeiliantongoption = {
                 },
 				formatter : '{value}%'
             },
-            data:[{value: 80, name: '设备联通性'}]
+            data:[{value: 80, name: '广东数据中心'}]
         }
     ]
 };
-shebeiliantongchart.setOption(shebeiliantongoption);  
+guangzhoushujuchart.setOption(guangzhoushujuoption);  
 
 
 
-var xianluliantongchart = echarts.init(document.getElementById('xianluliantong'),'chalk');
-var xianluliantongoption = {
+var nanhaishujuchart = echarts.init(document.getElementById('nanhaishuju'),'chalk');
+var nanhaishujuoption = {
     series : [
         {
             type:'gauge',
@@ -442,15 +615,99 @@ var xianluliantongoption = {
                 },
 				formatter : '{value}%'
             },
-            data:[{value: 60, name: '线路联通性'}]
+            data:[{value: 60, name: '南海数据中心'}]
         }
     ]
 };
-xianluliantongchart.setOption(xianluliantongoption); 
+nanhaishujuchart.setOption(nanhaishujuoption); 
+
+
+
+var shenzhenzaibeichart = echarts.init(document.getElementById('shenzhenzaibei'),'chalk');
+var shenzhenzaibeioption = {
+    series : [
+        {
+            type:'gauge',
+            min:0,
+            max:100,
+            splitNumber:10,
+            radius: '90%',
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: [[1, '#1e90ff']],
+                    width: 5,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5,
+					fontSize: 2
+                },
+				show : false
+            },
+            axisTick: {            // 坐标轴小标记
+                length :10,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10,
+					fontSize: 5
+                }
+            },
+            splitLine: {           // 分隔线
+                length :10,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            pointer: {
+                // 分隔线
+                width: 5,
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5
+            },
+            title : {
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontSize: 15,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            detail : {
+                borderWidth: 1,
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                offsetCenter: [0, '50%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    color: '#fff',
+					fontSize: 10
+                },
+				formatter : '{value}%'
+            },
+            data:[{value: 60, name: '深圳灾备中心'}]
+        }
+    ]
+};
+shenzhenzaibeichart.setOption(shenzhenzaibeioption);
+
+
 
 setInterval(function (){
-    xianluliantongoption.series[0].data[0].value = (90 +(Math.random()*10)).toFixed(0);
-    shebeiliantongoption.series[0].data[0].value = (80 +(Math.random()*20)).toFixed(0);
-    xianluliantongchart.setOption(xianluliantongoption); 
-	shebeiliantongchart.setOption(shebeiliantongoption);  
+    guangzhoushujuoption.series[0].data[0].value = (90 +(Math.random()*10)).toFixed(0);
+    nanhaishujuoption.series[0].data[0].value = (80 +(Math.random()*20)).toFixed(0);
+	shenzhenzaibeioption.series[0].data[0].value = (80 +(Math.random()*20)).toFixed(0);
+    nanhaishujuchart.setOption(nanhaishujuoption); 
+	guangzhoushujuchart.setOption(guangzhoushujuoption);
+    shenzhenzaibeichart.setOption(shenzhenzaibeioption);
 },2000)
