@@ -49,6 +49,7 @@ xianluline01chart.setOption(xianluline01option);
 
 
 var xianluline02chart = echarts.init(document.getElementById('xianluline02'),'chalk');
+var xianluline02chart = echarts.init(document.getElementById('xianluline02'),'chalk');
 var xianluline02option = {
     xAxis: [
         {

@@ -11,6 +11,7 @@ for (var i = 1; i < 20000; i++) {
 }
 
 fanghuoqianggaojingoption = {
+	backgroundColor : 'rgba(104,14,115,0.5)',
     color : ['#4cabce'],
 	title : {
         text: '告警增长趋势',
@@ -85,7 +86,7 @@ fanghuoqianggaojingoption = {
     ]
 };
 
-var fanghuoqianggaojingchart = echarts.init(document.getElementById('fanghuoqianggaojing'));
+var fanghuoqianggaojingchart = echarts.init(document.getElementById('fanghuoqianggaojing'),'chalk');
 fanghuoqianggaojingchart.setOption(fanghuoqianggaojingoption);
 
 setInterval(function (){

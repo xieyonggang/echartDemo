@@ -30,7 +30,7 @@
             "#d2f5a6",
             "#76f2f2"
         ],
-        "backgroundColor": "rgba(104,14,115,1)",
+        "backgroundColor": "#5e0c68",
         "textStyle": {},
         "title": {
             "textStyle": {
