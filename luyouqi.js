@@ -11,164 +11,609 @@
     }
 };
 
+var piePlaceHolderStyle = {
+	normal: {
+		color: 'rgba(0,0,0,0)',
+		label: {
+			show: false
+		},
+		labelLine: {
+			show: false
+		},
+		opacity: 0
+	},
+	emphasis: {
+		color: 'rgba(0,0,0,0)',
+		opacity: 0
+	}
+};
+var colorArr1 = ['#33b565', '#20cc98', '#20b9cf', '#2089cf', '#205bcf'];
+
+var dataPie1 = ['', '', '', '', ''];
+
+var pieCenter = ['50%', '90%'];
+
 var luyouqi01chart = echarts.init(document.getElementById('luyouqi01'),'chalk');
 var luyouqi01option = {
-    series: [
-        {
-            type:'pie',
-            radius: ['60%', '80%'],
-            avoidLabelOverlap: true,
-            label: {
-                normal: {
-                    show: true,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '12',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#a6f08f',
-                    shadowColor: '#a6f08f',
-                    shadowBlur: 10
-                }
-            },
-            data:[
-                {value:335, name:'GTM1'}
-            ]
-        }
-    ]
-};
+		color: colorArr1,
+		tooltip: {
+			show: false
+		},
+		singleAxis: [{
+			type: 'category',
+			axisLine: {
+				show: false
+			},
+			axisLabel: {
+				interval: 0,
+				textStyle: {
+					fontSize: 14,
+				},
+				show: false
+			},
+			axisTick: {
+				show: false,
+				alignWithLabel: true,
+			},
+			splitLine: {
+				show: false
+			},
+			data: [{
+				value: '20%',
+				textStyle: {
+					color: colorArr1[4]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[3]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[2]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[1]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[0]
+				}
+			}]
+		}],
+		series: [{
+				singleAxisIndex: 0,
+				coordinateSystem: 'singleAxis',
+				hoverAnimation: false,
+				symbolSize: 0,
+				type: 'scatter',
+				data: [
+					[0],
+					[1],
+					[2],
+					[3],
+					[4]
+				]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [50, 58],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [40, 48],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [32, 38],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [22, 30],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [14, 20],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			},
+
+		]
+	};
 luyouqi01chart.setOption(luyouqi01option);
 
 var luyouqi02chart = echarts.init(document.getElementById('luyouqi02'),'chalk');
 var luyouqi02option = {
-    series: [
-        {
-            type:'pie',
-            radius: ['60%', '80%'],
-            avoidLabelOverlap: true,
-            label: {
-                normal: {
-                    show: true,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '12',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#a6f08f',
-                    shadowColor: '#a6f08f',
-                    shadowBlur: 10
-                }
-            },
-            data:[
-                {value:335, name:'GTM2'}
-            ]
-        }
-    ]
-};
+		color: colorArr1,
+		tooltip: {
+			show: false
+		},
+		singleAxis: [{
+			type: 'category',
+			axisLine: {
+				show: false
+			},
+			axisLabel: {
+				interval: 0,
+				textStyle: {
+					fontSize: 14,
+				},
+				show: false
+			},
+			axisTick: {
+				show: false,
+				alignWithLabel: true,
+			},
+			splitLine: {
+				show: false
+			},
+			data: [{
+				value: '20%',
+				textStyle: {
+					color: colorArr1[4]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[3]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[2]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[1]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[0]
+				}
+			}]
+		}],
+		series: [{
+				singleAxisIndex: 0,
+				coordinateSystem: 'singleAxis',
+				hoverAnimation: false,
+				symbolSize: 0,
+				type: 'scatter',
+				data: [
+					[0],
+					[1],
+					[2],
+					[3],
+					[4]
+				]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [50, 58],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [40, 48],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [32, 38],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [22, 30],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [14, 20],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			},
+
+		]
+	};
 luyouqi02chart.setOption(luyouqi02option);
 
 var luyouqi03chart = echarts.init(document.getElementById('luyouqi03'),'chalk');
 var luyouqi03option = {
-    series: [
-        {
-            type:'pie',
-            radius: ['60%', '80%'],
-            avoidLabelOverlap: true,
-            label: {
-                normal: {
-                    show: true,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '12',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#a6f08f',
-                    shadowColor: '#a6f08f',
-                    shadowBlur: 10
-                }
-            },
-            data:[
-                {value:335, name:'LTM1'}
-            ]
-        }
-    ]
-};
+		color: colorArr1,
+		tooltip: {
+			show: false
+		},
+		singleAxis: [{
+			type: 'category',
+			axisLine: {
+				show: false
+			},
+			axisLabel: {
+				interval: 0,
+				textStyle: {
+					fontSize: 14,
+				},
+				show: false
+			},
+			axisTick: {
+				show: false,
+				alignWithLabel: true,
+			},
+			splitLine: {
+				show: false
+			},
+			data: [{
+				value: '20%',
+				textStyle: {
+					color: colorArr1[4]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[3]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[2]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[1]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[0]
+				}
+			}]
+		}],
+		series: [{
+				singleAxisIndex: 0,
+				coordinateSystem: 'singleAxis',
+				hoverAnimation: false,
+				symbolSize: 0,
+				type: 'scatter',
+				data: [
+					[0],
+					[1],
+					[2],
+					[3],
+					[4]
+				]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [50, 58],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [40, 48],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [32, 38],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [22, 30],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [14, 20],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			},
+
+		]
+	};
 luyouqi03chart.setOption(luyouqi03option);
 
 var luyouqi04chart = echarts.init(document.getElementById('luyouqi04'),'chalk');
 var luyouqi04option = {
-    series: [
-        {
-            type:'pie',
-            radius: ['60%', '80%'],
-            avoidLabelOverlap: true,
-            label: {
-                normal: {
-                    show: true,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '12',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#a6f08f',
-                    shadowColor: '#a6f08f',
-                    shadowBlur: 10
-                }
-            },
-            data:[
-                {value:335, name:'LTM2'}
-            ]
-        }
-    ]
-};
+		color: colorArr1,
+		tooltip: {
+			show: false
+		},
+		singleAxis: [{
+			type: 'category',
+			axisLine: {
+				show: false
+			},
+			axisLabel: {
+				interval: 0,
+				textStyle: {
+					fontSize: 14,
+				},
+				show: false
+			},
+			axisTick: {
+				show: false,
+				alignWithLabel: true,
+			},
+			splitLine: {
+				show: false
+			},
+			data: [{
+				value: '20%',
+				textStyle: {
+					color: colorArr1[4]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[3]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[2]
+				}
+			}, {
+				value: '15%',
+				textStyle: {
+					color: colorArr1[1]
+				}
+			}, {
+				value: '30%',
+				textStyle: {
+					color: colorArr1[0]
+				}
+			}]
+		}],
+		series: [{
+				singleAxisIndex: 0,
+				coordinateSystem: 'singleAxis',
+				hoverAnimation: false,
+				symbolSize: 0,
+				type: 'scatter',
+				data: [
+					[0],
+					[1],
+					[2],
+					[3],
+					[4]
+				]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [50, 58],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [40, 48],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [32, 38],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [22, 30],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [14, 20],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}
+		]
+	};
 luyouqi04chart.setOption(luyouqi04option);
 
 //make it update
@@ -179,23 +624,188 @@ luyouqicharts.push(luyouqi02chart);
 luyouqicharts.push(luyouqi03chart);
 luyouqicharts.push(luyouqi04chart);
 
-//setInterval(updateluyouqi, 3000);
+setInterval(updateluyouqi, 3000);
 
 function updateluyouqi() {
 	for (var i = 0;  i< luyouqicharts.length; i++) {
-	    var data = [];
-		var last = 1;
-		for (var j = 0; j < 4; ++j) {
-			last = Math.floor(last * (Math.random() * 0.5 + 0.5)
-				* 100) / 100;
-			data.push(last);
+	    
+		var mySeries = [{
+				singleAxisIndex: 0,
+				coordinateSystem: 'singleAxis',
+				hoverAnimation: false,
+				symbolSize: 0,
+				type: 'scatter',
+				data: [
+					[0],
+					[1],
+					[2],
+					[3],
+					[4]
+				]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [50, 58],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [40, 48],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [32, 38],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [22, 30],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [14, 20],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}
+		];
+		
+		var mySeries2 = [{
+				singleAxisIndex: 0,
+				coordinateSystem: 'singleAxis',
+				hoverAnimation: false,
+				symbolSize: 0,
+				type: 'scatter',
+				data: [
+					[0],
+					[1],
+					[2],
+					[3],
+					[4]
+				]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				radius: [40, 48],
+				itemStyle: dataStyle,
+				silent: true,
+				hoverAnimation: false,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [32, 38],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [22, 30],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}, {
+				type: 'pie',
+				startAngle: 60,
+				clockWise: false,
+				center: pieCenter,
+				hoverAnimation: false,
+				radius: [14, 20],
+				itemStyle: dataStyle,
+				silent: true,
+				data: [{
+					value: 15
+				}, {
+					value: 85,
+					itemStyle: piePlaceHolderStyle
+				}]
+			}
+		];
+		
+	    
+		if(Math.random()>0.5){
+			luyouqicharts[i].setOption({
+				series: mySeries
+			});
+		}else{
+			luyouqicharts[i].setOption({
+				series: mySeries2
+			});
 		}
-	
-		luyouqicharts[i].setOption({
-			series: [{
-				data: data
-			}]
-		});
 	}
 }
 

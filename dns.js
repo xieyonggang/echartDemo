@@ -1,14 +1,4 @@
-﻿// Generate data
-var category = [];
-var lineData = [];
-
-for (var i = 0; i < 8; i++) {
-    var b = Math.random() * 10 + 90;
-    category.push('DNS'+(i+1));
-    lineData.push(b);
-}
-
-
+﻿
 var dns01chart = echarts.init(document.getElementById('dns01'),'chalk');
 var dns01option = {
     series: [
@@ -135,10 +125,18 @@ function updatedns() {
 	}
 }
 
+// Generate data
+var category = [];
+var lineData = [];
+
+for (var i = 0; i < 8; i++) {
+    var b = Math.random() * 10 + 90;
+    category.push('DNS'+(i+1));
+    lineData.push(b);
+}
 
 
-
-dnsgaojingoption = {
+var dnsgaojingoption = {
     xAxis: {
         data: category,
         axisLine: {
@@ -196,3 +194,21 @@ dnsgaojingoption = {
 
 var dnsgaojingchart = echarts.init(document.getElementById('dnsgaojing'),'chalk');
 dnsgaojingchart.setOption(dnsgaojingoption);
+
+setInterval(function (){
+
+	var lineData0 = [];
+	var category0 = [];
+	for (var i = 0; i < 8; i++) {
+	    //var a ='DNS'+(Math.floor(Math.random() * 50)+1);
+	    //category0.push(a);
+		var b = Math.floor(Math.random() * 10) + 90 + 1;
+		lineData0.push(b);
+	}
+	
+	dnsgaojingoption.series[0].data = lineData0;
+	dnsgaojingoption.series[1].data = lineData0;
+	//dnsgaojingoption.xAxis.data = category0;
+    dnsgaojingchart.setOption(dnsgaojingoption);
+	
+},4000)
