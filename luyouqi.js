@@ -915,16 +915,6 @@ var dataSH = [
     [31,187,143,201,1.39,89,53,""]
 ];
 
-var schema = [
-    {name: 'date', index: 0, text: ''},
-    {name: 'AQIindex', index: 1, text: ''},
-    {name: 'PM25', index: 2, text: ''},
-    {name: 'PM10', index: 3, text: ''},
-    {name: 'CO', index: 4, text: ''},
-    {name: 'NO2', index: 5, text: ''},
-    {name: 'SO2', index: 6, text: ''}
-];
-
 
 var itemStyle = {
     normal: {
@@ -1050,13 +1040,11 @@ luyouqigaojingoption = {
     ],
     series: [
         {
-            
             type: 'scatter',
             itemStyle: itemStyle,
             data: dataBJ
         },
         {
-            
             type: 'scatter',
             itemStyle: itemStyle,
             data: dataSH
