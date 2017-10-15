@@ -1,4 +1,4 @@
-var duankouG01chart = echarts.init(document.getElementById('duankouG01'),'chalk');
+var duankouG01chart = echarts.init(document.getElementById('duankouG01'));
 var duankouG01option = {
     series: [{
         type: 'liquidFill',
@@ -23,7 +23,7 @@ var duankouG01option = {
 };
 duankouG01chart.setOption(duankouG01option);
 
-var duankouG02chart = echarts.init(document.getElementById('duankouG02'),'chalk');
+var duankouG02chart = echarts.init(document.getElementById('duankouG02'));
 var duankouG02option = {
     series: [{
         type: 'liquidFill',
@@ -48,7 +48,7 @@ var duankouG02option = {
 };
 duankouG02chart.setOption(duankouG02option);
 
-var duankouG03chart = echarts.init(document.getElementById('duankouG03'),'chalk');
+var duankouG03chart = echarts.init(document.getElementById('duankouG03'));
 var duankouG03option = {
     series: [{
         type: 'liquidFill',
@@ -73,7 +73,7 @@ var duankouG03option = {
 };
 duankouG03chart.setOption(duankouG03option);
 
-var duankouG04chart = echarts.init(document.getElementById('duankouG04'),'chalk');
+var duankouG04chart = echarts.init(document.getElementById('duankouG04'));
 var duankouG04option = {
     series: [{
         type: 'liquidFill',

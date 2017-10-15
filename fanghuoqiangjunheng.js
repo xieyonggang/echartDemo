@@ -85,7 +85,7 @@ fanghuoqianggaojingoption = {
     ]
 };
 
-var fanghuoqianggaojingchart = echarts.init(document.getElementById('fanghuoqianggaojing'),'chalk');
+var fanghuoqianggaojingchart = echarts.init(document.getElementById('fanghuoqianggaojing'));
 fanghuoqianggaojingchart.setOption(fanghuoqianggaojingoption);
 
 setInterval(function (){
@@ -151,7 +151,7 @@ fanghuoqiangFW01option = {
 };
 
 
-var fanghuoqiangFW01chart = echarts.init(document.getElementById('fanghuoqiangFW01'),'chalk');
+var fanghuoqiangFW01chart = echarts.init(document.getElementById('fanghuoqiangFW01'));
 fanghuoqiangFW01chart.setOption(fanghuoqiangFW01option);
 
 fanghuoqiangFW02option = {
@@ -204,7 +204,7 @@ fanghuoqiangFW02option = {
 };
 
 
-var fanghuoqiangFW02chart = echarts.init(document.getElementById('fanghuoqiangFW02'),'chalk');
+var fanghuoqiangFW02chart = echarts.init(document.getElementById('fanghuoqiangFW02'));
 fanghuoqiangFW02chart.setOption(fanghuoqiangFW02option);
 
 fanghuoqiangEB01option = {
@@ -257,7 +257,7 @@ fanghuoqiangEB01option = {
 };
 
 
-var fanghuoqiangEB01chart = echarts.init(document.getElementById('fanghuoqiangEB01'),'chalk');
+var fanghuoqiangEB01chart = echarts.init(document.getElementById('fanghuoqiangEB01'));
 fanghuoqiangEB01chart.setOption(fanghuoqiangEB01option);
 
 fanghuoqiangEB02option = {
@@ -310,6 +310,6 @@ fanghuoqiangEB02option = {
 };
 
 
-var fanghuoqiangEB02chart = echarts.init(document.getElementById('fanghuoqiangEB02'),'chalk');
+var fanghuoqiangEB02chart = echarts.init(document.getElementById('fanghuoqiangEB02'));
 fanghuoqiangEB02chart.setOption(fanghuoqiangEB02option);
 

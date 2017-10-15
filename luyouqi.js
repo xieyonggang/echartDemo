@@ -31,7 +31,7 @@ var colorArr1 = ['#33b565', '#20cc98', '#20b9cf', '#2089cf', '#205bcf'];
 
 var dataPie1 = ['', '', '', '', ''];
 
-var pieCenter = ['50%', '90%'];
+var pieCenter = ['50%', '100%'];
 
 var luyouqi01chart = echarts.init(document.getElementById('luyouqi01'),'chalk');
 var luyouqi01option = {
