@@ -535,7 +535,7 @@ var guangzhoushujuoption = {
                 },
 				formatter : '{value}%'
             },
-            data:[{value: 80, name: '广东数据中心'}]
+            data:[{value: 80, name: '广州数据中心'}]
         }
     ]
 };
