@@ -125,12 +125,12 @@ fanghuoqiangFW01option = {
             },
 			label: {
                 normal: {
-					formatter: 'FW01',
+					formatter: '南海OP-FW',
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 25,
-					fontSize : 15,
+					distance : 10,
+					fontSize : 10,
 					fontWeight: 'bolder',
 					color : '#fff'
                 }
@@ -178,12 +178,12 @@ fanghuoqiangFW02option = {
             },
 			label: {
                 normal: {
-					formatter: 'FW02',
+					formatter: '南海NAS-FW',
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 25,
-					fontSize : 15,
+					distance : 10,
+					fontSize : 10,
 					fontWeight: 'bolder',
 					color : '#fff'
                 }
@@ -231,12 +231,12 @@ fanghuoqiangEB01option = {
             },
 			label: {
                 normal: {
-					formatter: 'EB01',
+					formatter: '南海EX-FW',
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 25,
-					fontSize : 15,
+					distance : 10,
+					fontSize : 10,
 					fontWeight: 'bolder',
 					color : '#fff'
                 }
@@ -284,12 +284,12 @@ fanghuoqiangEB02option = {
             },
 			label: {
                 normal: {
-					formatter: 'EB02',
+					formatter: '南海OA-FW',
                     show: true,
                     position: 'left',
                     left : 'center',
-					distance : 25,
-					fontSize : 15,
+					distance : 10,
+					fontSize : 10,
 					fontWeight: 'bolder',
 					color : '#fff'
                 }

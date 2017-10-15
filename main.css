@@ -6852,7 +6852,8 @@ div{
 	font-size: 25px;
 	font-weight : bold;
 	text-align : center;
-	vertical-align : middle
+	vertical-align : middle;
+	color : #fff
 }
 
 .text{

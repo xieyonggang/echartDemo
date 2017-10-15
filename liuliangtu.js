@@ -289,7 +289,7 @@ dangqianliuliangOption = {
     },
     geo: {
         map: 'china',
-		layoutSize: 100,
+		zoom : 1.25,
         label: {
             emphasis: {
                 show: false
@@ -438,7 +438,7 @@ dangqianliuliang2Option = {
     },
     geo: {
         map: '广东',
-		layoutSize: 100,
+		zoom : 1.15,
         label: {
             emphasis: {
                 show: false
@@ -540,6 +540,86 @@ var guangzhoushujuoption = {
     ]
 };
 guangzhoushujuchart.setOption(guangzhoushujuoption);  
+
+
+
+var yuanqushujuchart = echarts.init(document.getElementById('yuanqushuju'),'chalk');
+var yuanqushujuoption = {
+    series : [
+        {
+            type:'gauge',
+            min:0,
+            max:100,
+            splitNumber:10,
+            radius: '90%',
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: [[1, 'lime']],
+                    width: 5,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            axisLabel: {            // 坐标轴小标记
+                textStyle: {       // 属性lineStyle控制线条样式
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5,
+					fontSize: 2
+                },
+				show : false
+            },
+            axisTick: {            // 坐标轴小标记
+                length :10,        // 属性length控制线长
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    color: 'auto',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10,
+					fontSize: 5
+                }
+            },
+            splitLine: {           // 分隔线
+                length :10,         // 属性length控制线长
+                lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                    width:3,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            pointer: {
+                // 分隔线
+                width: 5,
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5
+            },
+            title : {
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    fontSize: 15,
+                    color: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 10
+                }
+            },
+            detail : {
+                borderWidth: 1,
+                borderColor: '#fff',
+                shadowColor : '#fff', //默认透明
+                shadowBlur: 5,
+                offsetCenter: [0, '50%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontWeight: 'bolder',
+                    color: '#fff',
+					fontSize: 10
+                },
+				formatter : '{value}%'
+            },
+            data:[{value: 80, name: '园区网络'}]
+        }
+    ]
+};
+yuanqushujuchart.setOption(yuanqushujuoption);  
 
 
 
@@ -706,8 +786,10 @@ shenzhenzaibeichart.setOption(shenzhenzaibeioption);
 setInterval(function (){
     guangzhoushujuoption.series[0].data[0].value = (90 +(Math.random()*10)).toFixed(0);
     nanhaishujuoption.series[0].data[0].value = (80 +(Math.random()*20)).toFixed(0);
-	shenzhenzaibeioption.series[0].data[0].value = (80 +(Math.random()*20)).toFixed(0);
+	shenzhenzaibeioption.series[0].data[0].value = (70 +(Math.random()*30)).toFixed(0);
+	yuanqushujuoption.series[0].data[0].value = (80 +(Math.random()*20)).toFixed(0);
     nanhaishujuchart.setOption(nanhaishujuoption); 
 	guangzhoushujuchart.setOption(guangzhoushujuoption);
     shenzhenzaibeichart.setOption(shenzhenzaibeioption);
+	yuanqushujuchart.setOption(yuanqushujuoption);
 },2000)
